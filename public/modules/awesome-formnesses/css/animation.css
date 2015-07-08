@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background: #f5f4f1;
+  font-family: "Open Sans", sans-serif; }
+
+svg {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 640px; }
+
+.path {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000; }
+
+#animations {
+  float: left;
+  position: absolute;
+  z-index: 1;
+  height: 273%;
+  width: 20%;
+  border: solid;
+  margin-top: 10px; }
+
+.page-header {
+  margin-bottom: 0; }
+
+.content {
+  clear: both;
+  margin-left: 0;
+  margin-right: 0; }
+
+#part_one {
+  clear: both;
+  margin-left: 26%;
+  margin-right: 0;
+  width: 78%;
+  height: 25em;
+  background-color: white;
+  margin-top: -10%; }
+
+a, a:link, a:visited, a:active, a:hover {
+  text-decoration: none; }
+  a .start, a:link .start, a:visited .start, a:active .start, a:hover .start {
+    text-align: center;
+    margin-top: 4em;
+    padding-top: 8%;
+    z-index: 30; }
+    a .start span, a:link .start span, a:visited .start span, a:active .start span, a:hover .start span {
+      font-size: 2.5em;
+      line-height: 3; }
+
+#part_two {
+  width: 76.5%;
+  margin-left: 26.2%;
+  margin-top: 2%;
+  background-color: aliceblue;
+  height: 50em;
+  padding: 5em; }
+  #part_two h4 {
+    text-align: center;
+    font-size: 5em;
+    margin-top: 6%; }
+
+.step_two {
+  text-align: center;
+  font-size: 2em;
+  color: red; }
+
+label {
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 3%; }
+
+.number {
+  font-size: 3em;
+  color: red; }
+
+#part_three {
+  width: 76.5%;
+  margin-left: 26.2%;
+  background-color: white;
+  margin-top: 2%;
+  padding: 7%;
+  height: 40em; }
+
+.arrow {
+  text-align: center;
+  font-size: 4em;
+  margin-left: 48%; }
+
+#complete {
+  width: 76.5%;
+  margin-left: 26.2%;
+  padding: 4em;
+  background-color: aliceblue; }
+
+/*# sourceMappingURL=animation.css.map */

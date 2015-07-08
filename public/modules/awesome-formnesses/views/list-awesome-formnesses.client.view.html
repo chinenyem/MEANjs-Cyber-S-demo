@@ -1,0 +1,22 @@
+<section data-ng-controller="AwesomeFormnessesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Awesome formnesses</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="awesomeFormness in awesomeFormnesses" data-ng-href="#!/awesome-formnesses/{{awesomeFormness._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="awesomeFormness.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="awesomeFormness.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="awesomeFormness.name"></h4>
+            <!-- <h4 class="list-group-item-heading" data-ng-bind="awesomeFormness.describe_poc"></h4> -->
+            <h4 class="list-group-item-heading" data-ng-bind="awesomeFormness.identify_poc"></h4>
+            
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!awesomeFormnesses.$resolved || awesomeFormnesses.length">
+    	No Awesome formnesses yet, why don't you <a href="/#!/awesome-formnesses/create">create one</a>?
+    </div>
+</section>

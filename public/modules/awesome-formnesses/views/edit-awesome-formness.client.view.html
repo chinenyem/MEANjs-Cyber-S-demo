@@ -1,0 +1,48 @@
+<section data-ng-controller="AwesomeFormnessesController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Awesome formness</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="awesomeFormness.name" id="name" class="form-control" placeholder="Name" required>
+                    </div>   
+                    <hr>                 
+                    <label class="control-label" for="name">Identify POC</label>
+                    <div class="controls">
+                        <select  ng-model="item" ng-options="item.choice for item in items"> 
+                        </select>
+                        <input type="text" ng-model="awesomeFormness.identify_poc">
+                    </div>
+                    <label class="control-label" for="name">Describe POC</label>
+                    <div class="controls">
+                         <textarea type="text" data-ng-model="awesomeFormness.describe_poc" id="describe_poc" class="form-control" placeholder="Describe_poc" required> </textarea>
+                    </div>
+
+                    <hr>
+
+                    <label class="control-label" for="code">Code Example</label>
+                    <div class="controls">
+                        <textarea type="text" data-ng-model="awesomeFormness.sudo_code" id="sudo_code" class="form-control" placeholder="Code Example" required> </textarea>
+                    </div>
+                    <label class="control-label" for="doc">Upload Document</label>
+                    <div class="controls">
+                        <input type="file" name="upload_doc" data-ng-model="awesomeFormness.upload_doc" id="upload_doc">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+

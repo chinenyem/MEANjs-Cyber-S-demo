@@ -1,0 +1,27 @@
+<section data-ng-controller="AwesomeFormnessesController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="awesomeFormness.name"></h1>
+	</div>
+	<div class ="page-content">
+		<p>{{awesomeFormness.identify_poc}}</p>
+		<p>{{awesomeFormness.describe_poc}}</p>
+		<p>{{awesomeFormness.sudo_code}}<p> 
+		<p>{{awesomeFormness.upload_doc.name}}<p>
+	</div>
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == awesomeFormness.user._id))">
+		<a class="btn btn-primary" href="/#!/awesome-formnesses/{{awesomeFormness._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="awesomeFormness.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="awesomeFormness.user.displayName"></span>
+		</em>
+	</small>
+</section>
